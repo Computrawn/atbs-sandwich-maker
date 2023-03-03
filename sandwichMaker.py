@@ -25,7 +25,7 @@ def sandwich_maker(name):
     mustard = pyip.inputYesNo()
     print("Are you in the mood for lettuce?")
     lettuce = pyip.inputYesNo()
-    print("Finally, would you like to add tomatoes?")
+    print("And tomatoes?")
     tomatoes = pyip.inputYesNo()
     print(f"How many of this type of sandwich would you like?")
     number = pyip.inputInt(min=1)
