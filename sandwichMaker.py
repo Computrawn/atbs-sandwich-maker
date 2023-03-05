@@ -17,11 +17,11 @@ def sandwich_maker():
     protein = pyip.inputMenu(['chicken', 'turkey', 'ham', 'tofu'], "Let's get to the meat of things. Which protein "
                                                                    "strikes your fancy?\n")
     if protein == 'chicken':
-        protein_price = 3.00
+        protein_price = 3
     elif protein == 'turkey':
         protein_price = 3.25
     elif protein == 'ham':
-        protein_price = 3.50
+        protein_price = 3.5
     else:
         protein_price = 2.75
     # cheese selection
@@ -35,30 +35,30 @@ def sandwich_maker():
     tomatoes = pyip.inputYesNo("And tomatoes? ")
     # Amount selection
     number = pyip.inputInt("How many of this type of sandwich would you like? ", min=1)
-    print(f"OK. I have {number} {protein} (${protein_price:.2f}) on {bread} (${bread_price:.2f}) with:")
+    print(f"OK. I have {number} {protein} (${number * protein_price:.2f}) on {bread} (${number * bread_price:.2f}) with:")
     if cheese == 'yes':
-        cheese_price = 1.50
-        print(f'{cheese_type} (${cheese_price:.2f})')
+        cheese_price = 1.5
+        print(f'* {cheese_type} (${number * cheese_price:.2f})')
     else:
         cheese_price = 0
     if mayo == 'yes':
         mayo_price = .25
-        print(f'mayo (${mayo_price:.2f})')
+        print(f'* mayo (${number * mayo_price:.2f})')
     else:
         mayo_price = 0
     if mustard == 'yes':
         mustard_price = .25
-        print(f'mustard (${mustard_price:.2f})')
+        print(f'* mustard (${number * mustard_price:.2f})')
     else:
         mustard_price = 0
     if lettuce == 'yes':
-        lettuce_price = .50
-        print(f'lettuce (${lettuce_price:.2f})')
+        lettuce_price = .5
+        print(f'* lettuce (${number * lettuce_price:.2f})')
     else:
         lettuce_price = 0
     if tomatoes == 'yes':
         tomato_price = .75
-        print(f'tomatoes (${tomato_price:.2f})')
+        print(f'* tomatoes (${number * tomato_price:.2f})')
     else:
         tomato_price = 0
     sandwich_cost = bread_price + protein_price + cheese_price + mayo_price + \
