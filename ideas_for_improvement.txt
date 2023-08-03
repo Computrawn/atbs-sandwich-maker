@@ -1,4 +1,0 @@
-I could improve this by doing the following:
-* convert variables into dictionary to reduce redundancy.
-* save all data into a CSV.
-* make a GUI.
