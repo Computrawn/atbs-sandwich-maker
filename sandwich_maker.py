@@ -1,7 +1,16 @@
-# Python3
-# sandwichMaker.py — An exercise in using PyInputPlus library to validate user input.
+#!/usr/bin/env python3
+# sandwich_maker.py — An exercise in understanding input validation.
+# For more information, see README.md
 
+import logging
 import pyinputplus as pyip
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logging.txt",
+    format="%(asctime)s -  %(levelname)s -  %(message)s",
+)
+logging.disable(logging.CRITICAL)  # Note out to enable logging.
 
 
 def sandwich_maker():
@@ -85,4 +94,9 @@ def sandwich_maker():
         print(f"We're sorry, {user_name}. Unable to process order.")
 
 
-sandwich_maker()
+def main():
+    sandwich_maker()
+
+
+if __name__ == "__main__":
+    main()
